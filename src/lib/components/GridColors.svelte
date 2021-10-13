@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getColors, stringToColorStyle, ColorStyle } from './functions/ChromaColors';
+	import { getColors, stringToColorStyle, ColorStyle } from '../functions/ChromaColors';
 	import Slider from './Slider.svelte';
 
 	export let firstColor = '#fafa6e';
@@ -35,7 +35,7 @@
 		<Slider bind:steps label="Steps" />
 	</header>
 
-	<table class="border-collaps">
+	<table>
 		<thead>
 			<tr>
 				<th>Color</th>
@@ -48,7 +48,7 @@
 			{#each colorList as c}
 				<tr>
 					<td data-color-background style="background-color:{c.hex}" />
-					<td data-color-hex class="uppercase">{c.hex}</td>
+					<td data-color-hex>{c.hex}</td>
 					<td data-color-rgb>{c.rgb}</td>
 					<td data-color-hsl>{c.hsl}</td>
 				</tr>
@@ -59,21 +59,20 @@
 
 <style lang="postcss">
 	table {
-		@apply bg-gray-50;
+		@apply bg-gray-50 border-collapse;
 	}
 
 	thead {
-		@apply border-b-2 border-gray-500;
+		@apply border-solid border-b-2 border-opacity-100 border-gray-500;
 	}
 
 	th,
 	td {
-		@apply border-l border-r border-gray-500;
-		@apply p-1 text-center;
+		@apply border-solid border-l border-r border-opacity-100 border-gray-500  uppercase p-1 text-center;
 	}
 
 	tr {
-		@apply border-b border-gray-500;
+		@apply border-solid border-b border-opacity-100 border-gray-500;
 	}
 	tbody tr:hover {
 		@apply bg-gray-200;

@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import GridColors from '$lib/GridColors.svelte';
+import { GridColors } from '../lib/index';
 import { render } from '@testing-library/svelte';
 import { stringToColorStyle } from "../lib/functions/ChromaColors";
 import match from "@el3um4s/match";

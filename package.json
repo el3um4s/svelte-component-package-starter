@@ -1,6 +1,27 @@
 {
-	"name": "svelte-component-package-starter",
-	"version": "0.0.1",
+	"name": "@el3um4s/svelte-component-package-starter",
+	"version": "0.0.4",
+	"description": "Svelte Component Package Starter",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/el3um4s/svelte-component-package-starter.git"
+	},
+	"keywords": [
+		"typescript",
+		"npm",
+		"template",
+		"ts",
+		"svelte",
+		"svelte-kit",
+		"web-component",
+		"svelte-component"
+	],
+	"author": "Samuele C. De Tomasi",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/el3um4s/svelte-component-package-starter/issues"
+	},
+	"homepage": "https://github.com/el3um4s/svelte-component-package-starter#readme",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -14,7 +35,12 @@
 		"test:coverage": "jest --coverage",
 		"check-updates": "npx npm-check-updates",
 		"check-updates:minor": "npx npm-check-updates --target minor",
-		"check-updates:patch": "npx npm-check-updates --target patch"
+		"check-updates:patch": "npx npm-check-updates --target patch",
+		"version:patch": "npm version patch",
+		"version:add": "git add -A src",
+		"postversion": "git push && git push --tags && npm run release",
+		"package": "svelte-kit package",
+		"release": "jest --coverage && npm run package && npm publish ./package"
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "next",
@@ -46,6 +72,11 @@
 	"type": "module",
 	"dependencies": {
 		"@el3um4s/match": "^0.0.2",
-		"chroma-js": "^2.1.2"
+		"chroma-js": "^2.1.2",
+		"svelte2tsx": "^0.4.7"
+	},
+	"funding": {
+		"type": "patreon",
+		"url": "https://www.paypal.me/el3um4s"
 	}
 }
