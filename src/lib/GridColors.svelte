@@ -32,7 +32,7 @@
 			data-testid="choose-second-color"
 		/>
 
-		<Slider bind:steps />
+		<Slider bind:steps label="Steps" />
 	</header>
 
 	<table class="border-collaps">

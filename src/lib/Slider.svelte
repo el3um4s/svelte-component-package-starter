@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let steps = 9;
+	export let label = 'Steps';
 </script>
 
-<label for="choose-steps">Steps</label>
+<label for="choose-steps">{label}</label>
 <input
 	type="range"
 	data-testid="choose-steps"
