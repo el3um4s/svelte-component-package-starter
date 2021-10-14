@@ -1,5 +1,6 @@
 <script lang="ts">
-	import GridColors from '$lib/GridColors.svelte';
+	import GridColors from '$lib/components/GridColors.svelte';
+	import { Slider } from '$lib/index';
 
 	const settings = {
 		firtColor: 'khaki',
@@ -8,4 +9,7 @@
 	};
 </script>
 
-<GridColors {...settings} />
+<main>
+	<Slider label="Slider" />
+	<GridColors {...settings} --border-color="orange" />
+</main>

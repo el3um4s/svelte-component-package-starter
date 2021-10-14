@@ -1,6 +1,6 @@
 {
 	"name": "@el3um4s/svelte-component-package-starter",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Svelte Component Package Starter",
 	"repository": {
 		"type": "git",
@@ -75,8 +75,14 @@
 		"chroma-js": "^2.1.2",
 		"svelte2tsx": "^0.4.7"
 	},
-	"funding": {
-		"type": "patreon",
-		"url": "https://www.paypal.me/el3um4s"
-	}
+	"funding": [
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/el3um4s"
+		},
+		{
+			"type": "individual",
+			"url": "https://www.paypal.me/el3um4s"
+		}
+	]
 }

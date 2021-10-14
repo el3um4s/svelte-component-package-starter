@@ -16,21 +16,25 @@
 
 <section>
 	<header>
-		<label for="choose-first-color">From</label>
-		<input
-			type="color"
-			bind:value={firstColor}
-			id="choose-first-color"
-			data-testid="choose-first-color"
-		/>
+		<div>
+			<label for="choose-first-color">From</label>
+			<input
+				type="color"
+				bind:value={firstColor}
+				id="choose-first-color"
+				data-testid="choose-first-color"
+			/>
+		</div>
 
-		<label for="choose-second-color">To</label>
-		<input
-			type="color"
-			bind:value={secondColor}
-			id="choose-second-color"
-			data-testid="choose-second-color"
-		/>
+		<div>
+			<label for="choose-second-color">To</label>
+			<input
+				type="color"
+				bind:value={secondColor}
+				id="choose-second-color"
+				data-testid="choose-second-color"
+			/>
+		</div>
 
 		<Slider bind:steps label="Steps" />
 	</header>
@@ -58,21 +62,51 @@
 </section>
 
 <style lang="postcss">
+	* {
+		--default-color-border: #6b7280;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	header {
+		display: flex;
+		flex-direction: row;
+		column-gap: 16px;
+		align-items: center;
+	}
+
+	div {
+		display: flex;
+		flex-direction: row;
+		column-gap: 4px;
+	}
+
+	input {
+		-webkit-appearance: none;
+		@apply p-0 m-0 border-0;
+	}
 	table {
-		@apply bg-gray-50 border-collapse;
+		@apply bg-gray-50 table border-collapse box-border border-transparent text-center;
 	}
 
 	thead {
-		@apply border-solid border-b-2 border-opacity-100 border-gray-500;
+		border-bottom: 2px solid var(--border-color, var(--default-color-border));
 	}
 
 	th,
 	td {
-		@apply border-solid border-l border-r border-opacity-100 border-gray-500  uppercase p-1 text-center;
+		text-transform: uppercase;
+		padding: 0.25rem;
+		border-left: 1px solid var(--border-color, var(--default-color-border));
+		border-right: 1px solid var(--border-color, var(--default-color-border));
 	}
 
 	tr {
-		@apply border-solid border-b border-opacity-100 border-gray-500;
+		border-bottom: 1px solid var(--border-color, var(--default-color-border));
 	}
 	tbody tr:hover {
 		@apply bg-gray-200;

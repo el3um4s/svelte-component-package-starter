@@ -3,28 +3,36 @@
 	export let label = 'Steps';
 </script>
 
-<label for="choose-steps">{label}</label>
-<input
-	type="range"
-	data-testid="choose-steps"
-	id="choose-steps"
-	bind:value={steps}
-	min="2"
-	max="24"
-/>
+<div>
+	<label for="choose-steps">{label}</label>
+	<input
+		type="range"
+		data-testid="choose-steps"
+		id="choose-steps"
+		bind:value={steps}
+		min="2"
+		max="24"
+	/>
+</div>
 
 <style lang="postcss">
+	div {
+		display: flex;
+		flex-direction: row;
+		gap: 4px;
+	}
 	input {
 		-webkit-appearance: none;
-		@apply bg-transparent w-max;
+		@apply bg-gray-200 w-max rounded-xl box-content border-2 border-gray-300 p-0 m-0;
 	}
 
 	input::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		@apply border h-4 w-4 rounded-xl bg-yellow-500 cursor-pointer;
+		@apply border-2 border-solid h-full w-6 rounded-xl bg-yellow-500 cursor-pointer border-yellow-800;
 	}
 
 	input::-webkit-slider-runnable-track {
-		@apply w-full h-full cursor-pointer bg-gray-300;
+		-webkit-appearance: none;
+		@apply w-full h-full cursor-pointer;
 	}
 </style>
