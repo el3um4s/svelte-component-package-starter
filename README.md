@@ -1,57 +1,109 @@
 # SVELTE COMPONENT PACKAGE STARTER
 
-**WIP**
+My template for creating Svelte Component Packages
 
+* [TypeScript](https://www.typescriptlang.org/)
+* [SvelteKit](https://kit.svelte.dev/)
+* TS to JS
+* ESLint
+* [TailwindCSS](https://tailwindcss.com/)
 
+NPM link: [@el3um4s/svelte-component-package-starter](https://www.npmjs.com/package/@el3um4s/svelte-component-package-starter)
 
-in `svelte.config.js`
+### Getting Started
 
-```js
-import preprocess from 'svelte-preprocess';
-
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	preprocess: [
-		preprocess({
-			postcss: true
-		})
-	],
-
-	kit: {
-		target: '#svelte',
-		package: {
-			dir: 'package',
-			emitTypes: true
-		}
-	}
-};
-
-export default config;
-```
-
-poi aggiungi [svelte2tsx](https://www.npmjs.com/package/svelte2tsx)
+To create a new project based on this template using degit:
 
 ```bash
-npm i svelte2tsx
+npx degit el3um4s/svelte-component-package-starter
 ```
 
-poi aggiungi in `package.json`:
-
-```json
-"scripts":{
-    "package": "svelte-kit package"
-}
-```
-
-Esegui 
+Then install the dependecies with:
 
 ```bash
-npm run package
+npm install
 ```
 
-Non funziona perché manca un entry point per il pacchetto. Creo `index.ts` in `src/lib` (il contenuto di `lib` diverrà parte del package)
+Now update the name field in package.json with your desired package name. Then update the homepage field in package.json. And finally add your code.
 
-```ts
-export { default as GridColors } from './GridColors.svelte';
-export { default as Slider } from './Slider.svelte'; 
+### Build the package
+
+Run
+
+```bash
+npm run build
+```
+
+### Test the package
+
+You can test the code with Jest
+
+```bash
+npm test
+```
+
+You can find the test coverage in `coverage/lcov-report/index.html`.
+
+### Check dependencies
+
+You can check and upgrade dependencies to the latest versions, ignoring specified versions. with [npm-check-updates](https://www.npmjs.com/package/npm-check-updates):
+
+```bash
+npm run check-updates
+```
+
+You can also use `npm run check-updates:minor` to update only patch and minor.
+
+Instead `npm run check-updates:patch` only updates patch.
+
+### Publish
+
+First commit the changes to GitHub. Then login to your [NPM](https://www.npmjs.com) account (If you don’t have an account you can do so on [https://www.npmjs.com/signup](https://www.npmjs.com/signup))
+
+```bash
+npm login
+```
+
+Then run publish:
+
+```bash
+npm publish
+```
+
+If you're using a scoped name use:
+
+```bash
+npm publish --access public
+```
+
+### Bumping a new version
+
+To update the package use:
+
+```bash
+npm version patch
+```
+
+and then
+
+```bash
+npm publish
+```
+
+### Install and use the package
+
+To use the package in a project:
+
+```bash
+npm i @el3um4s/svelte-component-package-starter
+```
+
+and then in a svelte file:
+
+```html
+<script lang="ts">
+  import { GridColors } from "@el3um4s/svelte-component-package-starter";
+</script>
+
+<GridColors  />
 ```
