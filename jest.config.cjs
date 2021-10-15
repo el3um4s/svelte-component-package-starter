@@ -3,7 +3,8 @@ module.exports = {
 		'^.+\\.svelte$': [
 			'svelte-jester',
 			{
-				preprocess: './svelte.config.test.cjs'
+				preprocess: true,
+				compilerOptions: {}
 			}
 		],
 		'^.+\\.ts$': 'ts-jest',
