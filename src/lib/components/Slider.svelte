@@ -1,10 +1,14 @@
 <script lang="ts">
 	export let steps = 9;
 	export let label = 'Steps';
+
+	$: label = label || '';
 </script>
 
 <div>
-	<label for="choose-steps">{label}</label>
+	{#if label.length > 0}
+		<label for="choose-steps">{label}</label>
+	{/if}
 	<input
 		type="range"
 		data-testid="choose-steps"

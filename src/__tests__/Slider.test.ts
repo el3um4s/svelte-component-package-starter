@@ -28,3 +28,45 @@ describe('Skeleton (input:steps)', () => {
 		})
 	}
 });
+
+describe('Label', () => {
+	test('Label exist', () => {
+		const slider = render(Slider);
+		const label = slider.container.getElementsByTagName('label')[0];
+		expect(label).toBeInTheDocument();
+		expect(label).toBeVisible();
+	})
+
+	test('Label has text (default)', () => {
+		const slider = render(Slider);
+		const label = slider.container.getElementsByTagName('label')[0];
+		expect(label).toHaveTextContent('Steps');
+	})
+
+	test('Label has text (custom)', () => {
+		const slider = render(Slider, {label: "Hello World"});
+		const label = slider.container.getElementsByTagName('label')[0];
+		expect(label).toHaveTextContent('Hello World');
+	})
+
+	test('Label has changing text (default to "Ciao")', async () => {
+		const slider = render(Slider);
+		let label = slider.container.getElementsByTagName('label')[0];
+		expect(label).toHaveTextContent('Steps');
+		await slider.rerender({label:"Ciao"});
+		label = slider.container.getElementsByTagName('label')[0];
+		expect(label).toHaveTextContent('Ciao');
+	})
+
+
+	test('Label has changing text (default to "")', async () => {
+		const slider = render(Slider);
+		let label = slider.container.getElementsByTagName('label');
+		expect(label[0]).toHaveTextContent('Steps');
+		await slider.rerender({label:""});
+		label = slider.container.getElementsByTagName('label');
+		expect(label.length).toBe(0);
+		expect(label[0]).toBeUndefined();
+		
+	})
+})
