@@ -1,4 +1,4 @@
-import { getChromaColors, stringToColorStyle, getColors } from "../lib/functions/ChromaColors";
+import { getChromaColors, stringToColorStyle, getColors } from "../../lib/functions/ChromaColors";
 
 test("getChromaColors", () => {
     const firstColor = "white";

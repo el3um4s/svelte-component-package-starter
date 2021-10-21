@@ -5,3 +5,4 @@ node_modules
 /package
 /coverage
 /lib
+__diff_output__

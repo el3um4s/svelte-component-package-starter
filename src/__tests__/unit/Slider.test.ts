@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { Slider } from '../lib/index';
+import { Slider } from '../../lib/index';
 import { render } from '@testing-library/svelte';
 
 test('Slider is on page', () => {
