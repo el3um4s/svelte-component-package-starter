@@ -3,7 +3,7 @@
 	import { Slider } from '$lib/index';
 
 	const settings = {
-		firtColor: 'khaki',
+		firstColor: 'khaki',
 		secondColor: 'teal',
 		steps: 9
 	};

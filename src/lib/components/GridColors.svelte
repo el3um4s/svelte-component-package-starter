@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { getColors, stringToColorStyle, ColorStyle } from '../functions/ChromaColors';
 	import Slider from './Slider.svelte';
+	import InputColors from './_InputColors.svelte';
 
 	export let firstColor = '#fafa6e';
 	export let secondColor = 'red';
@@ -16,26 +17,7 @@
 
 <section>
 	<header>
-		<div>
-			<label for="choose-first-color">From</label>
-			<input
-				type="color"
-				bind:value={firstColor}
-				id="choose-first-color"
-				data-testid="choose-first-color"
-			/>
-		</div>
-
-		<div>
-			<label for="choose-second-color">To</label>
-			<input
-				type="color"
-				bind:value={secondColor}
-				id="choose-second-color"
-				data-testid="choose-second-color"
-			/>
-		</div>
-
+		<InputColors bind:firstColor bind:secondColor />
 		<Slider bind:steps label="Steps" />
 	</header>
 
@@ -79,16 +61,16 @@
 		align-items: center;
 	}
 
-	div {
+	/* div {
 		display: flex;
 		flex-direction: row;
 		column-gap: 4px;
-	}
-
+	} */
+	/* 
 	input {
 		-webkit-appearance: none;
 		@apply p-0 m-0 border-0;
-	}
+	} */
 	table {
 		@apply bg-gray-50 table border-collapse box-border border-transparent text-center;
 	}
