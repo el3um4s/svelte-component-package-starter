@@ -2,11 +2,13 @@
 
 My template for creating Svelte Component Packages
 
-* [TypeScript](https://www.typescriptlang.org/)
-* [SvelteKit](https://kit.svelte.dev/)
-* TS to JS
-* ESLint
-* [TailwindCSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [SvelteKit](https://kit.svelte.dev/)
+- TS to JS
+- ESLint
+- [TailwindCSS](https://tailwindcss.com/)
+- [Jest](https://jestjs.io/)
+- [Playwright](https://playwright.dev/)
 
 NPM link: [@el3um4s/svelte-component-package-starter](https://www.npmjs.com/package/@el3um4s/svelte-component-package-starter)
 
@@ -26,6 +28,12 @@ npm install
 
 Now update the name field in package.json with your desired package name. Then update the homepage field in package.json. And finally add your code.
 
+You can clean up the sample code with:
+
+```bash
+npm run clean
+```
+
 ### Build the package
 
 Run
@@ -34,15 +42,27 @@ Run
 npm run build
 ```
 
+### Create the package
+
+```bash
+npm run package
+```
+
 ### Test the package
 
 You can test the code with Jest
 
 ```bash
-npm test
+npm run test
 ```
 
 You can find the test coverage in `coverage/lcov-report/index.html`.
+
+You can use Playwright to perform a visual regression test:
+
+```bash
+npm run test:e2e
+```
 
 ### Check dependencies
 
@@ -102,8 +122,8 @@ and then in a svelte file:
 
 ```html
 <script lang="ts">
-  import { GridColors } from "@el3um4s/svelte-component-package-starter";
+	import { GridColors } from '@el3um4s/svelte-component-package-starter';
 </script>
 
-<GridColors  />
+<GridColors />
 ```

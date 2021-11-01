@@ -42,7 +42,8 @@
 		"version:add": "git add -A src",
 		"postversion": "git push && git push --tags && npm run release",
 		"package": "svelte-kit package",
-		"release": "npm run test:coverage && npm run package && npm publish ./package"
+		"release": "npm run test:coverage && npm run package && npm publish ./package",
+		"clean": "node clean.js"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.16.2",
