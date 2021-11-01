@@ -45,7 +45,7 @@
 		"release": "npm run test:coverage && npm run package && npm publish ./package"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.16.1",
+		"@playwright/test": "^1.16.2",
 		"@sveltejs/kit": "next",
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/svelte": "^3.0.3",
@@ -54,7 +54,7 @@
 		"@types/jest-image-snapshot": "^4.3.1",
 		"@typescript-eslint/eslint-plugin": "^5.2.0",
 		"@typescript-eslint/parser": "^5.2.0",
-		"autoprefixer": "^10.3.7",
+		"autoprefixer": "^10.4.0",
 		"cross-env": "^7.0.3",
 		"cssnano": "^5.0.8",
 		"eslint": "^8.1.0",
@@ -62,16 +62,16 @@
 		"eslint-plugin-svelte3": "^3.2.1",
 		"jest": "^27.3.1",
 		"jest-image-snapshot": "^4.5.1",
-		"playwright": "^1.16.1",
+		"playwright": "^1.16.2",
 		"postcss": "^8.3.11",
 		"postcss-load-config": "^3.1.0",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
 		"svelte": "^3.44.0",
-		"svelte-check": "^2.2.7",
+		"svelte-check": "^2.2.8",
 		"svelte-jester": "^2.1.5",
 		"svelte-preprocess": "^4.9.8",
-		"tailwindcss": "^2.2.17",
+		"tailwindcss": "^2.2.19",
 		"ts-jest": "^27.0.7",
 		"tslib": "^2.3.1",
 		"typescript": "^4.4.4"
@@ -80,7 +80,7 @@
 	"dependencies": {
 		"@el3um4s/match": "^0.0.2",
 		"chroma-js": "^2.1.2",
-		"svelte2tsx": "^0.4.7"
+		"svelte2tsx": "^0.4.8"
 	},
 	"funding": [
 		{
