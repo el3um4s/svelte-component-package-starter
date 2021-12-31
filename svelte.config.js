@@ -1,4 +1,5 @@
 import preprocess from 'svelte-preprocess';
+import adapter from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -6,8 +7,10 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		preprocess({
-			postcss: true
-		})
+			style: "postcss",
+			script: "typescript",
+			postcss: true,
+		}),
 	],
 
 	kit: {
@@ -16,7 +19,15 @@ const config = {
 		package: {
 			dir: 'package',
 			emitTypes: true
-		}
+		},
+		adapter: adapter({
+			pages: "build",
+			assets: "build",
+			fallback: null,
+		}),
+		paths: {
+			base: "/svelte-component-package-starter",
+		},
 	}
 };
 
