@@ -3,9 +3,9 @@
 	import Slider from './Slider.svelte';
 	import InputColors from './_InputColors.svelte';
 
-	export let firstColor = '#fafa6e';
-	export let secondColor = 'red';
-	export let steps = 9;
+	export let firstColor: string = '#fafa6e';
+	export let secondColor: string = 'red';
+	export let steps: number = 9;
 
 	firstColor = stringToColorStyle(firstColor).hex;
 	secondColor = stringToColorStyle(secondColor).hex;

@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let steps = 9;
-	export let label = 'Steps';
+	export let steps: number = 9;
+	export let label: string = 'Steps';
 
 	$: label = label || '';
 </script>

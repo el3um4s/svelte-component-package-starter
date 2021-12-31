@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { stringToColorStyle } from '../functions/ChromaColors';
 
-	export let firstColor = 'white';
-	export let secondColor = 'black';
+	export let firstColor: string = 'white';
+	export let secondColor: string = 'black';
 
 	$: firstColor = stringToColorStyle(firstColor).hex;
 	$: secondColor = stringToColorStyle(secondColor).hex;

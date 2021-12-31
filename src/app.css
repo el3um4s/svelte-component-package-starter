@@ -3,28 +3,83 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--text-color: theme('colors.gray.800');
+	--background-color: theme('colors.gray.50');
+}
+
 @layer base {
 	* {
-		@apply m-0 p-0 border-0 align-baseline text-gray-900;
+		@apply m-0 p-0 border-0 align-baseline;
+		color: var(--text-color, theme('colors.gray.800'));
+		background-color: var(--background-color, theme('colors.gray.50'));
 	}
+
 	html,
 	body {
-		@apply flex relative w-full h-full m-0 box-border text-gray-900;
-	}
-	body {
+		@apply flex relative m-0 box-border flex-col items-stretch;
 		@apply overflow-y-hidden;
+		color: var(--text-color, theme('colors.gray.800'));
+		background-color: var(--background-color, theme('colors.gray.50'));
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
 			Cantarell, 'Helvetica Neue', sans-serif;
 	}
-	h1 {
-		@apply text-4xl text-yellow-600 font-bold mb-2;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply mr-0 ml-0 mb-4 font-bold;
 	}
 
-	button {
-		@apply py-2 px-4 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-700;
+	h1 {
+		@apply text-4xl font-bold mb-2;
+		color: var(--text-color, theme('colors.gray.800'));
+	}
 
-		&:focus {
-			@apply outline-none ring-2 ring-yellow-400 ring-opacity-75;
-		}
+	h2,
+	h3 {
+		@apply text-2xl;
+	}
+
+	a {
+		@apply border border-dotted box-border;
+		border-bottom-color: var(--text-color, theme('colors.gray.800'));
+	}
+
+	a:hover {
+		border-color: var(--text-color, theme('colors.gray.800'));
+	}
+
+	main {
+		@apply overflow-y-auto;
+		height: calc(100vh);
+	}
+	main::-webkit-scrollbar {
+		@apply w-4;
+	}
+	main::-webkit-scrollbar-track {
+		background-color: var(--text-color, theme('colors.gray.800'));
+	}
+	main::-webkit-scrollbar-thumb {
+		@apply border-2 border-solid;
+		background-color: var(--background-color, theme('colors.gray.50'));
+		border-color: var(--text-color, theme('colors.gray.800'));
+	}
+}
+
+@layer components {
+	.theme-light {
+		--background-color: theme('colors.gray.200');
+		--text-color: theme('colors.gray.800');
+	}
+	.theme-dark {
+		--background-color: theme('colors.gray.800');
+		--text-color: theme('colors.gray.200');
+	}
+	.main-center {
+		@apply p-1 w-full flex flex-col m-auto max-w-prose;
 	}
 }

@@ -43,9 +43,11 @@
 		"postversion": "git push && git push --tags && npm run release",
 		"package": "svelte-kit package",
 		"release": "npm run test:coverage && npm run package && npm publish ./package",
-		"clean": "node clean.js"
+		"clean": "node clean.js",
+		"get-info-svelte-components": "node getInfoSvelteComponents.js"
 	},
 	"devDependencies": {
+		"@el3um4s/svelte-get-component-info": "^0.0.16",
 		"@playwright/test": "^1.17.1",
 		"@sveltejs/kit": "next",
 		"@testing-library/jest-dom": "^5.16.1",
@@ -80,6 +82,7 @@
 	"type": "module",
 	"dependencies": {
 		"@el3um4s/match": "^0.0.2",
+		"@el3um4s/svelte-component-info": "^0.0.12",
 		"chroma-js": "^2.1.2",
 		"svelte2tsx": "^0.4.12"
 	},

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import GridColors from '$lib/components/GridColors.svelte';
-	import { Slider } from '$lib/index';
+	import infoSvelteComponents from './infoSvelteComponents.json';
+	import { SvelteInfo } from '@el3um4s/svelte-component-info';
 
 	const settings = {
 		firstColor: 'khaki',
@@ -10,6 +11,12 @@
 </script>
 
 <main>
-	<Slider label="Slider" />
-	<GridColors {...settings} --border-color="orange" />
+	<SvelteInfo
+		name="GridColors"
+		description="Svelte Component Package Starter"
+		info={infoSvelteComponents['GridColors.svelte']}
+		urlPackage="@el3um4s/svelte-component-package-starter"
+	>
+		<GridColors {...settings} --border-color="orange" slot="demo" />
+	</SvelteInfo>
 </main>
