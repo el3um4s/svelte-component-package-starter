@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+
+		
+
+		<link rel="stylesheet" href="/svelte-component-package-starter/_app/assets/start-464e9d0a.css">
+		<link rel="stylesheet" href="/svelte-component-package-starter/_app/assets/vendor-c0107b56.css">
+		<link rel="stylesheet" href="/svelte-component-package-starter/_app/assets/pages/__layout.svelte-dbec8344.css">
+		<link rel="stylesheet" href="/svelte-component-package-starter/_app/assets/pages/test.svelte-9adf311e.css">
+		<link rel="stylesheet" href="/svelte-component-package-starter/_app/assets/GridColors-f90d5771.css">
+		<link rel="modulepreload" href="/svelte-component-package-starter/_app/start-dd54c531.js">
+		<link rel="modulepreload" href="/svelte-component-package-starter/_app/chunks/vendor-8a891483.js">
+		<link rel="modulepreload" href="/svelte-component-package-starter/_app/pages/__layout.svelte-d52da051.js">
+		<link rel="modulepreload" href="/svelte-component-package-starter/_app/pages/test.svelte-c21e4904.js">
+		<link rel="modulepreload" href="/svelte-component-package-starter/_app/chunks/GridColors-3a9f6da6.js">
+
+		<script type="module">
+			import { start } from "/svelte-component-package-starter/_app/start-dd54c531.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"/svelte-component-package-starter","assets":"/svelte-component-package-starter"},
+				session: {},
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/svelte-component-package-starter/_app/pages/__layout.svelte-d52da051.js"),
+						import("/svelte-component-package-starter/_app/pages/test.svelte-c21e4904.js")
+					],
+					url: new URL("sveltekit://prerender/test"),
+					params: {}
+				}
+			});
+		</script><script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/service-worker.js');
+			}
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<main class="svelte-1s8digu"><main class="svelte-1s3lp7x"><h1>Visual Regression Test</h1>
+	<p>Use this page to test component graphics changes</p>
+	<div id="grid-colors" class="svelte-1s3lp7x"><div style="display: contents; --border-color:orange;"><section class="svelte-1k36ssm"><header class="svelte-1k36ssm"><div class="svelte-1466g0q"><label for="choose-first-color">From</label>
+	<input type="color" id="choose-first-color" data-testid="choose-first-color" class="svelte-1466g0q" value="#f0e68c"></div>
+
+<div class="svelte-1466g0q"><label for="choose-second-color">To</label>
+	<input type="color" id="choose-second-color" data-testid="choose-second-color" class="svelte-1466g0q" value="#008080">
+</div>
+		<div class="svelte-1irpldo"><label for="choose-steps">Steps</label>
+	<input type="range" data-testid="choose-steps" id="choose-steps" min="2" max="24" class="svelte-1irpldo" value="9">
+</div></header>
+
+	<table class="svelte-1k36ssm"><thead class="svelte-1k36ssm"><tr class="svelte-1k36ssm"><th class="svelte-1k36ssm">Color</th>
+				<th class="svelte-1k36ssm">HEX</th>
+				<th class="svelte-1k36ssm">RGB</th>
+				<th class="svelte-1k36ssm">HLS</th></tr></thead>
+		<tbody class="svelte-1k36ssm"><tr class="svelte-1k36ssm"><td data-color-background style="background-color:#f0e68c" class="svelte-1k36ssm"></td>
+					<td data-color-hex class="svelte-1k36ssm">#f0e68c</td>
+					<td data-color-rgb class="svelte-1k36ssm">rgb(240,230,140)</td>
+					<td data-color-hsl class="svelte-1k36ssm">hsl(54,76.92%,74.51%)</td>
+				</tr><tr class="svelte-1k36ssm"><td data-color-background style="background-color:#d2d98b" class="svelte-1k36ssm"></td>
+					<td data-color-hex class="svelte-1k36ssm">#d2d98b</td>
+					<td data-color-rgb class="svelte-1k36ssm">rgb(210,217,139)</td>
+					<td data-color-hsl class="svelte-1k36ssm">hsl(65.38,50.65%,69.8%)</td>
+				</tr><tr class="svelte-1k36ssm"><td data-color-background style="background-color:#b4cd89" class="svelte-1k36ssm"></td>
+					<td data-color-hex class="svelte-1k36ssm">#b4cd89</td>
+					<td data-color-rgb class="svelte-1k36ssm">rgb(180,205,137)</td>
+					<td data-color-hsl class="svelte-1k36ssm">hsl(82.06,40.48%,67.06%)</td>
+				</tr><tr class="svelte-1k36ssm"><td data-color-background style="background-color:#96c088" class="svelte-1k36ssm"></td>
+					<td data-color-hex class="svelte-1k36ssm">#96c088</td>
+					<td data-color-rgb class="svelte-1k36ssm">rgb(150,192,136)</td>
+					<td data-color-hsl class="svelte-1k36ssm">hsl(105,30.77%,64.31%)</td>
+				</tr><tr class="svelte-1k36ssm"><td data-color-background style="background-color:#78b386" class="svelte-1k36ssm"></td>
+					<td data-color-hex class="svelte-1k36ssm">#78b386</td>
+					<td data-color-rgb class="svelte-1k36ssm">rgb(120,179,134)</td>
+					<td data-color-hsl class="svelte-1k36ssm">hsl(134.24,27.96%,58.63%)</td>
+				</tr><tr class="svelte-1k36ssm"><td data-color-background style="background-color:#5aa685" class="svelte-1k36ssm"></td>
+					<td data-color-hex class="svelte-1k36ssm">#5aa685</td>
+					<td data-color-rgb class="svelte-1k36ssm">rgb(90,166,133)</td>
+					<td data-color-hsl class="svelte-1k36ssm">hsl(153.95,29.92%,50.2%)</td>
+				</tr><tr class="svelte-1k36ssm"><td data-color-background style="background-color:#3c9a83" class="svelte-1k36ssm"></td>
+					<td data-color-hex class="svelte-1k36ssm">#3c9a83</td>
+					<td data-color-rgb class="svelte-1k36ssm">rgb(60,154,131)</td>
+					<td data-color-hsl class="svelte-1k36ssm">hsl(165.32,43.93%,41.96%)</td>
+				</tr><tr class="svelte-1k36ssm"><td data-color-background style="background-color:#1e8d82" class="svelte-1k36ssm"></td>
+					<td data-color-hex class="svelte-1k36ssm">#1e8d82</td>
+					<td data-color-rgb class="svelte-1k36ssm">rgb(30,141,130)</td>
+					<td data-color-hsl class="svelte-1k36ssm">hsl(174.05,64.91%,33.53%)</td>
+				</tr><tr class="svelte-1k36ssm"><td data-color-background style="background-color:#008080" class="svelte-1k36ssm"></td>
+					<td data-color-hex class="svelte-1k36ssm">#008080</td>
+					<td data-color-rgb class="svelte-1k36ssm">rgb(0,128,128)</td>
+					<td data-color-hsl class="svelte-1k36ssm">hsl(180,100%,25.1%)</td>
+				</tr></tbody></table>
+</section></div></div>
+
+	<section class="svelte-1s3lp7x"><button id="change-border-color" class="svelte-1s3lp7x">Change border color</button>
+		<button id="change-first-color" class="svelte-1s3lp7x">Change first color</button>
+		<button id="change-second-color" class="svelte-1s3lp7x">Change second color</button>
+
+		<div class="svelte-1s3lp7x"><span>Steps:</span>
+			<label><input type="radio" value="2">
+					2
+				</label><label><input type="radio" value="3">
+					3
+				</label><label><input type="radio" value="4">
+					4
+				</label><label><input type="radio" value="5">
+					5
+				</label><label><input type="radio" value="6">
+					6
+				</label><label><input type="radio" value="7">
+					7
+				</label><label><input type="radio" value="8">
+					8
+				</label><label><input type="radio" value="9" checked>
+					9
+				</label><label><input type="radio" value="10">
+					10
+				</label><label><input type="radio" value="11">
+					11
+				</label><label><input type="radio" value="12">
+					12
+				</label><label><input type="radio" value="13">
+					13
+				</label><label><input type="radio" value="14">
+					14
+				</label><label><input type="radio" value="15">
+					15
+				</label><label><input type="radio" value="16">
+					16
+				</label><label><input type="radio" value="17">
+					17
+				</label><label><input type="radio" value="18">
+					18
+				</label><label><input type="radio" value="19">
+					19
+				</label><label><input type="radio" value="20">
+					20
+				</label><label><input type="radio" value="21">
+					21
+				</label><label><input type="radio" value="22">
+					22
+				</label><label><input type="radio" value="23">
+					23
+				</label><label><input type="radio" value="24">
+					24
+				</label></div>
+
+		<button id="reset" class="svelte-1s3lp7x">Reset</button></section>
+</main>
+</main>
+
+</div>
+	</body>
+</html>
